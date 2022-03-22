@@ -3,14 +3,29 @@
   <head>
     <title>Rails E-Store</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
+      <%= csrf_meta_tags %>
+      <%= csp_meta_tag %>
+      <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+      <%= javascript_importmap_tags %>
   </head>
 
   <body class='<%= controller.controller_name %>'>
-    <%= yield %>
+    <div id="banner">
+      <%= image_tag("logo.jpeg") %>
+      <%= @page_title || "Rails E-Store" %>
+    </div>
+    <div id="columns">
+      <div id="side">
+        <ul>
+          <li><a href="http://www....">Home</a></li>
+          <li><a href="http://www..../faq">Questions</a></li>
+          <li><a href="http://www..../news">News</a></li>
+          <li><a href="http://www..../contact">Contact</a></li>
+        </ul>
+      </div>
+      <div id="main">
+      <%= yield %>
+      </div>
+    </div>
   </body>
 </html>
