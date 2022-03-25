@@ -1,4 +1,4 @@
-.carts, #side #cart {
+.carts {
     .item_price, .total_line {
         text-align: right;
     }
