@@ -34,6 +34,9 @@ gem "jbuilder"
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 
+# Use Rails controller testing gem to use assert_template
+gem 'rails-controller-testing'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
