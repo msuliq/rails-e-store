@@ -1,3 +1,7 @@
-OrderNotifier#received
+Dear <%= @order.name %>,
 
-<%= @greeting %>, find me in app/views/order_notifier_mailer/received.text.erb
+We at Rails E-Store thank you for your following order:
+
+<%= render @order.line_items -%>
+
+We will notify you additionally once your order is shipped.

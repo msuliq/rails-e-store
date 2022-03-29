@@ -1,5 +1,8 @@
-<h1>OrderNotifier#shipped</h1>
-
+<h3>Your order from Rails E-Store is on the way</h3>
 <p>
-  <%= @greeting %>, find me in app/views/order_notifier_mailer/shipped.html.erb
+We have shipped your recent order:
 </p>
+<table>
+  <tr><th colspan="2">Qty</th><th>Description</th></tr>
+  <%= render @order.line_items -%>
+</table>
