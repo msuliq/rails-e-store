@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  skip_before_action :authorize
+
   def new
   end
 
@@ -7,9 +9,9 @@ class SessionsController < ApplicationController
       if user and user.authenticate(params[:password])
       session[:user_id] = user.id
       redirect_to admin_url
-      end
-    else
+      else
       redirect_to login_url, alert: "Wrong name or password"
+      end
     end
 
   def destroy

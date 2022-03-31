@@ -58,6 +58,8 @@ rescue_from ActiveRecord::RecordNotFound, with: :invalid_cart
       format.json { head :no_content }
     end
   end
+  
+  skip_before_action :authorize, only: [:create, :update, :destroy]
 
   private
     # Use callbacks to share common setup or constraints between actions.
